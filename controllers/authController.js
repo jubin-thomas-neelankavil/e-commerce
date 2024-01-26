@@ -4,7 +4,7 @@ const CustomError = require("../errors")
 const { createTokenUser, attachCookiesToResponse } = require("../utils")
 
 // Register User
-const register = async (req, res) => {
+const   register = async (req, res) => {
   const { name, email, password } = req.body
   const emailAlreadyExists = await User.findOne({ email })
   if (emailAlreadyExists) {
